@@ -42,4 +42,10 @@ def speck(input_string, content):
             if possible_flag:
                 possible.append(word)
     return possible
-print(speck(input("Input: "), load_wordlist(WORDLIST_FILENAME)))
+
+user_input = " "
+content = load_wordlist(WORDLIST_FILENAME)
+while user_input != "":
+    user_input = input("Input (blank line to quit): ")
+    if user_input != "":
+        print(speck(user_input, content))
